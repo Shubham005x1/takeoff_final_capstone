@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "capstore-takeoff",
+  "private_key_id": "2c008b61ee2358e16325d02f20bd5917de8d51f2",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQC77CFWIPjmaTpL\nh8fN8vNMXiJACHM/AVAm/f74WUGeFPf75EzPwh33yDyb1xazAvJO8TXPqLV3qMp6\n96MUMS5oNLWns77u/24056BpThMeRHw5AR4cdeZUu22aQoGh2uQJXkfq+jxuSLo1\naKDNAriZrnOc/HgGYF5Q3NtNQ/RdVG7jYhLI59wKcauTbzSup3F5OQ/jO5Ans9kH\nbHBVCU8jwFGahzaYLOlrLio+pDWdvBtmtjPbYoxy4K/HnqPnRACqXj+vVNfqB2Cs\nwNbwdwK3T33zwVX9SzzjhFWctwtCcwCfVMQud4gV6lUJE8d6xpFbndKZnSBy6jKH\nZLNtUUDtAgMBAAECggEASEcZSU20PbayT7OhIzKy5if8h2FYph6ErAKcKvv1c25A\nNPdJnczdBtzShuPy3JYhCUDYAA81AJmAi0wsworp/PVs+tv072p6AkomVepMCyOv\nHaOy56JnHSbbkG3M+yo78+h5w8RMMuSxDfK4ijFmO+GvoO0v4s/05qgThwPAfJZe\nxkvRvoc7ilYf4TvOXqUKQc+7b1EZOZICtIWnLc9HtfvLBW8ucDaI/ulEqG9LiqHs\nQrdMN1uvPWofT4N9rTRxLSwnKzrEgbse/u7urjtEHDtrSwMfWWeVRkNi046o9I6u\n/Nvv8vL/Wh2Q7xaBNXepHSz784FD80ZnRMdVE+/m9wKBgQD/TPeTAnAS96cb0c33\n1MvS800Uqxxi/4gpsXbDr+/6swvPiqhEa9NGkj98AGRS4MsSlE11KOJ/sWI7PfCW\nf6Ee0FeWciiq9V88N23xymv2KxyZT+1VPiVf+nK2diBGGTSItSZXj0LoS0AiHkhj\nOKY5uWbeXGEgN2szezT9GqGh4wKBgQC8b+nKUponLJS9+7xzL8tzoqibtzrxWdd/\ng/FhoyjX1Q6+u3dqd+bW6H0jwzVwvIfUEdVeyqHSrqP60g3p+Sbcsj8LWm7WgcO2\nxZFmVSm42eXX8g0lzljiqlkf92Ir6dFUlMtrXmew7c+WjqTGbCdVf1kFfU1P/OkY\nwtKbhfrK7wKBgQCeLHWHI4+EcOOcHNTbo3/U5uDu2UTxIRifnE/U1gB89slugJ3Y\nJmXz51Bl52hA4P1wOWn0GKycKK6PvcR9uf19Nd/OWlRP905V5JG9qIhTMEq7wgVt\nNt+5I1ZHLdC5HYyq1nE29o+hlF3bxZ9buhFi2jedtOaIK03Dy6X82q8huQKBgQCZ\nb7c6m5ASHebv269TS7OqcORCByzjoXgryNAf5K85L69V92gBNaitjZl4KVe2eI1R\nTUQkb3LdDn9PmQLjZZETW8CiCfz+haNLjAwc+3OBpUvWTq4N/ru5tWPk95bkkvt0\nl8QbpT9hfgLuYTAisaZFo/Bk2+a8Hv/evaSoJqxT2QKBgGPCkBwaXE0AhlrMJtbT\nwSlKK2WhX/nlXMbA9U21YCQncVYi+lSgreXHVnmtHvZ7FZpp7SLdzBiuFOV5Mm5m\nDlPKIbUv4QgwaRO/GFN+H4OvpzACcu9ZLEQU8XIao0hI4qGKNesxKqESAZzAGord\n9tpG+fYxHiEGyJlLXrbnzIUz\n-----END PRIVATE KEY-----\n",
+  "client_email": "capstone-takeoff@capstore-takeoff.iam.gserviceaccount.com",
+  "client_id": "100776259753744736806",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/capstone-takeoff%40capstore-takeoff.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

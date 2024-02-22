@@ -1,0 +1,203 @@
+basePath: /api
+info:
+  contact: {}
+  description: API for managing groceries
+  title: Grocery API
+  version: "1.0"
+paths:
+  /CreateGrocery:
+    post:
+      consumes:
+      - application/json
+      description: Create a new grocery item with the provided data and image
+      operationId: create-grocery
+      parameters:
+      - description: JSON data for the grocery item
+        in: formData
+        name: json-data
+        required: true
+        type: string
+      - description: Image file for the grocery item
+        in: formData
+        name: image
+        required: true
+        type: file
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: File uploaded successfully
+          schema:
+            type: string
+        "400":
+          description: 'Bad Request: Invalid JSON payload or missing required fields'
+          schema:
+            type: string
+        "500":
+          description: Internal Server Error
+          schema:
+            type: string
+      summary: Create a new grocery item
+  /DeleteGrocery:
+    delete:
+      description: Delete a grocery item by providing its ID
+      operationId: delete-grocery
+      parameters:
+      - description: ID of the grocery item to delete
+        in: query
+        name: id
+        required: true
+        type: integer
+      responses:
+        "200":
+          description: OK
+          schema:
+            additionalProperties: true
+            type: object
+        "400":
+          description: 'Bad Request: Invalid ID'
+          schema:
+            type: string
+        "500":
+          description: Internal Server Error
+          schema:
+            type: string
+      summary: Delete a grocery item
+  /UpdateGrocery:
+    patch:
+      consumes:
+      - application/json
+      description: Update a grocery item by providing its ID and new data
+      operationId: update-grocery
+      parameters:
+      - description: ID of the grocery item to update
+        in: query
+        name: id
+        required: true
+        type: string
+      - description: JSON data containing updated information
+        in: formData
+        name: json-data
+        required: true
+        type: string
+      - description: Image file for the grocery item
+        in: formData
+        name: image
+        type: file
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: OK
+          schema:
+            additionalProperties: true
+            type: object
+        "400":
+          description: 'Bad Request: Invalid ID or missing JSON data'
+          schema:
+            type: string
+        "404":
+          description: 'Not Found: Grocery item not found'
+          schema:
+            type: string
+        "500":
+          description: Internal Server Error
+          schema:
+            type: string
+      summary: Update a grocery item
+  /ViewAllGroceries:
+    get:
+      consumes:
+      - application/json
+      description: Retrieve a list of groceries with optional filters and pagination.
+      operationId: view-all-groceries
+      parameters:
+      - description: Page token for cursor-based pagination
+        in: query
+        name: pageToken
+        type: string
+      - description: Filter by product name
+        in: query
+        name: productname
+        type: string
+      - description: 'Price filter format: ''gt:100'', ''eq:50'', ''lt:200'''
+        in: query
+        name: priceFilter
+        type: string
+      - description: Filter by category
+        in: query
+        name: category
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            additionalProperties: true
+            type: object
+      summary: View all groceries
+  /api/GetGroceryByID:
+    get:
+      consumes:
+      - application/json
+      description: Retrieve a grocery item by providing its ID
+      operationId: get-grocery-by-id
+      parameters:
+      - description: ID of the grocery item to retrieve
+        in: query
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            additionalProperties: true
+            type: object
+        "400":
+          description: 'Bad Request: Invalid ID'
+          schema:
+            type: string
+        "404":
+          description: 'Not Found: Grocery item not found'
+          schema:
+            type: string
+        "500":
+          description: Internal Server Error
+          schema:
+            type: string
+      summary: Get a grocery item by ID
+  /api/bulkUploadGroceryItems:
+    post:
+      consumes:
+      - multipart/form-data
+      description: Uploads multiple grocery items from a CSV or JSON file
+      operationId: bulk-upload-grocery-items
+      parameters:
+      - description: CSV or JSON file containing grocery items
+        in: formData
+        name: file
+        required: true
+        type: file
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: File URL sent successfully
+          schema:
+            additionalProperties: true
+            type: object
+        "400":
+          description: 'Bad Request: Unsupported file type. Only CSV or JSON files
+            are allowed'
+          schema:
+            type: string
+        "500":
+          description: Internal Server Error
+          schema:
+            type: string
+      summary: Bulk upload grocery items
+swagger: "2.0"
